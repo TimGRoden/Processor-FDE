@@ -180,13 +180,15 @@ namespace ProcessorFDE
         }
         static void Main(string[] args)
         {
+            Console.WindowWidth = 60;
+            Console.WindowHeight = 22;
             Console.WriteLine("Click or Time-Delay? ('click' or otherwise)");
             isClick = Console.ReadLine().ToLower() == "click";
             if (!isClick)
             {
                 Console.WriteLine("Please enter the desired time delay (in ms):");
                 string userInput = Console.ReadLine();
-                if (userInput != "") int.Parse(userInput);
+                if (userInput != "") timeDelay = int.Parse(userInput);
             }
 
             Console.Clear();
